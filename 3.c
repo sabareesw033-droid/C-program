@@ -1,10 +1,9 @@
 #include <stdio.h>
-#define sabarees 3.14
-#include<math.h>
-
 int main() {
     /* calculatin area of a circle */
     /* formula is pi*sqr(r) */
+
+    float pi = 3.14519;
 
     float volume;
 
@@ -16,11 +15,11 @@ int main() {
 
     scanf("%d",&r);
 
-    area=sabarees*pow(r,2);
+    area=pi*r*r;
 
     printf("the value of the circle with radius %d is %f\n",r,area);
 
-    volume = (4/3)*sabarees*pow(r,3);
+    volume = (4/3)*pi*r*r*r;
 
     printf("the area of volume sphere for given  r = %d is =%.2f\n",r,volume);
 

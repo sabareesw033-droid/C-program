@@ -1,16 +1,15 @@
-#include <stdio.h>
-#include<string.h>
-int main() 
-{
+#include<stdio.h>
+#include<float.h>
+#include<limits.h>
+int main() {
+    
+    printf("the minimum value of float is = %e\n\n",FLT_MIN);
 
-    char name[12];
+    printf("the maximum value of float is = %f\n\n\n",FLT_MAX);
 
-    gets(name);
+printf("the minimum value of float is = %E\n\n",FLT_MIN);
 
- /*   puts(name); */
-
-    printf("THE NAME YOU TYPED IS %s :", strupr(name));
-
-
-
+    printf("the minimum value of integer is = %i\n\n",INT_MIN);
+    
+    printf("the maximum value of integer is = %d\n\n\n",INT_MAX);
 }

@@ -1,24 +1,11 @@
 #include <stdio.h>
-int main()
+float multi(float i1,float i2,float i3)
 {
-    /*incremental operation difference*/
-
-    int a=100;
-
-    int b,c;
-
-    printf("the value now %d\n ",a);
-
-    a=a+1;
-
-   printf("the value now %d\n ",a);
-
-    b=a++;
-
-    printf("the value now %d\n ",b);
-
-    c=++a;
-
-    printf("the value now %d\n ",c);
-
-    }
+    return(i1*i2*i3);
+}
+int main()
+ {
+    printf("multiply is %.2f\n",multi(4,6,7));
+    printf("multiply is %.3f",multi(22,6,27));
+    
+}

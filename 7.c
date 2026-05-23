@@ -1,11 +1,32 @@
 #include <stdio.h>
+#define COLMAX 12
+#define ROWMAX 12
 int main() {
-    int a=10;
-    printf("the value of now is %d :",a);
 
-    /* the icrement operator method 1*/
+    float row,column,y;
+    row=1;
+    printf("multiplication table \n");
+    printf("==============================\n");
 
-    a++;
+    do/* outer loop starts */
+    {
+        column=1;
 
-     printf("the value of after a increment is %d :",a);
+        do/*inner loop starts*/
+        {
+            y=row*column;
+            printf("%.4f",y);
+            column=column+1;
+
+        }
+        while(column<=COLMAX);/*inner loop over */
+        printf("\n");
+        row=row+1;
+
+    }
+    while(row<=ROWMAX);
+    printf("=================");
+
+
+    
 }
