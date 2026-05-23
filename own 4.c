@@ -1,11 +1,8 @@
 #include <stdio.h>
-
-int main() {
+{
     int num, count = 0;
 
-    printf("Enter a Number: ");
 
-    scanf("%d", &num);
 
    
         while (num > 0) {
@@ -14,9 +11,14 @@ int main() {
 
             count++;
         }
-    
+    int main() 
+
+            printf("Enter a Number: ");
+
+    scanf("%d", &num);
 
     printf("\nNumber of digits: %d", count);
     
     return 0;
-}
+
+ }
