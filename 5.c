@@ -1,36 +1,41 @@
 #include <stdio.h>
-#include<string.h>
+#include <string.h>
+
 
 int main() {
-    char str[30];
 
-    int vowel=0,consonent=0,i=0;
+    char s1[],s2[],s3;
 
-    printf("enter a string: ");
+    int x,l1,l2,l3;
 
-    gets(str);
 
-    while(strupr[i] != '\0')
+    printf("\n\nenter two string constants \n");
+
+    printf("?");
+
+    scanf("%s %s ",s1,s2);
+
+    /* comparing s1,s2 */
+
+    x = strcmp(s1,s2);
+
+    if(x !=0)
     {
-        if( str[i]=='A' ){
+        printf("\n\nstring are not equal \n");
+        strcat(s1,s2); /*joining s1,s2 */
+    }
+    else
+    printf("\n\nstirng are equal\n");
+    /* coping s1 to s3 */
+        strcpy(s3,s1);
+    /* finding length of string */
+        l1=strlen(s1);
+        l2=strlen(s2);
+        l3=strlen(s3);
 
-        vowel++;
-        }
+        /* output */
 
-        if(toupper[i]='A'||)
-        {
-            vowel--;
-        }
 
-        else {
-        consonent ++;
-        }
-
-        i++;
-
-           }
-           printf("\nnumber of vowels = %d",vowel);
-
-           printf("\nnumber of consonent = %d",consonent);
-
+    
+    
 }

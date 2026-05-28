@@ -1,28 +1,22 @@
 #include <stdio.h>
-#include<ctype.h>
-#define size 80
+#include<string.h>
 
 int main() {
+    char name[]="rajinikanth";
 
-    char letter[size];
+    int n;
 
+    n=strlen(name);
 
-    int count ;
+    printf("%s has %d letters \n\n",name ,n);   
 
-    /* read the line */
+    printf("%s" ,strcat(strcat(name,"is a superstar")),"the boss"); 
 
-    for(count=0;count<size;++count)
+    char name[]="bharathi";
 
-    letter[count]=getchar();
+    char degree ="dr";
 
-    /* display the line in upper case */
+    char join[]=strcat(name,degree);
 
-    for(count=0;count<size;++count)
-
-    putchar(toupper(letter[count]));
-
-
-
-
-
+    printf("%S",join);
 }

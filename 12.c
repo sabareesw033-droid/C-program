@@ -1,22 +1,24 @@
 #include <stdio.h>
 int main() {
-    int a,b,c;
+    int *p,sum,i;
+    int x[5]={5,9,6,3,7};
 
-    printf("enter a number a ");
-    scanf("%d",&a);
+    i=0;
+    p=x;  /* initializing with base address of x */
 
-    printf("enter another number b ");
-    scanf("%d",&b);
+    printf("element value address\n\n");
 
-    if(a>b)
-    printf("a=%d and b=%d - therefore a is greater than b",a,b);
+    while(i<5)
+    {
+        printf("x[%d] %d %u\n",i,*p,p);
+        sum=sum + *p; /* accessing  array element */
 
-    else if(a<b)
-    printf("a=%d and b=%d - therefore a is smaller than b",a,b);
+        i++;
+        p++;  /* incrementing pointer */
+    }
+    printf("\n     sum          =         %d\n",sum);
+    printf("\n     &x[0]        =         %u\n",&x[0]);
+    printf("\n     p            =         %u\n",p);
 
-    else
-    printf("a=%d and b=%d - therefore a&b are equal",a,b);
 
-
-
-}
+    }

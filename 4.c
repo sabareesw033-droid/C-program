@@ -1,33 +1,23 @@
 #include <stdio.h>
-#include<string.h>
-
 int main() {
-    char str[30];
+    char A[] = "sscet";
+    char B[] = "SSCET";
+    char C[] = "yes";
+    char D[] = "no";
 
-    int vowel=0,consonent=0,i=0;
+    printf("\n\n");
 
-    printf("enter a string: ");
+    printf("is A and B are Equal ?\n\n");
 
-    gets(str);
-
-    while(str[i] != '\0')
+    if(strcpy(A,B) == 0)
     {
-        if(str[i]=='a' || str[i]=='A' || str[i]=='e'  || str[i]=='E'  || str[i]=='I' 
+        printf("is A and B are Equal \n\n");
+    }
+    else 
+    {
+        printf("A and B are not equal %s\n ",D);
 
-        || str[i]=='i' || str[i]=='O' || str[i]=='o' || str[i]=='U' ||str[i]=='u' ){
-
-        vowel++;
-        }
-
-        else {
-        consonent ++;
-        }
-
-        i++;
-
-           }
-           printf("\nnumber of vowels = %d",vowel);
-
-           printf("\nnumber of consonent = %d",consonent);
-
+    }
+        printf("%s",strcmp(A,B)==0? C:D);
+   
 }

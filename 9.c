@@ -1,18 +1,10 @@
 #include <stdio.h>
 int main() {
-
-    int x,a;
-    
-    
-
-    /*for(i=0;i<=11;i++){
-
-        x=a;
-
-    } */
-    
-    printf("%d %d",a,x);
-
-    
+    int x, *p1, **p2;
+    x =100;
+    p1 =&x;  /*address of x */
+    p2 =&p1;  /* address of pl */
+    printf("%d\n", **p2);
+    printf("%u", *p1);
 
 }

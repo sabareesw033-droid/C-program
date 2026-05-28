@@ -1,28 +1,34 @@
-#include <stdio.h>
-#include <ctype.h> // Required for tolower()
+#include<stdio.h>
+#include<string.h>
 
-int main() {
-    char str[30];
-    int vowel = 0, consonant = 0, i = 0;
+// palindrome
+void main()
+{
+    char chk='t',str[30];
+    int len,left,right;
+    printf("\nenter a string :");
+    scanf("%s",str);
+    len=strlen(str);
+    left=0;
+    right=len-1;
+    
+    while(left<right &&chk=='t')
+    {
+        if(!(str[left]==str[right]))
 
-    printf("Enter a string: ");
-    fgets(str, sizeof(str), stdin); // Safer than gets()
+        chk='f';
 
-    while (str[i] != '\0') {
-        char c = tolower(str[i]); // Convert to lowercase to check easily
+        left++;
 
-        if (c >= 'a' && c <= 'z') { // Only count actual letters
-            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
-                vowel++;
-            } else {
-                consonant++;
-            }
-        }
-        i++;
+        right++;
+    }
+    if(chk=='t')
+    {
+        printf("\nthe string %s is a polindrome ",str);
+    }
+    else
+    {
+        printf("\nthe string %s is not a polindrome",str);
     }
 
-    printf("\nNumber of vowels = %d", vowel);
-    printf("\nNumber of consonants = %d", consonant);
-
-    return 0;
 }

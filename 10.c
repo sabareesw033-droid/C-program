@@ -1,20 +1,38 @@
-#include <stdio.h>
-int main() {
-    
-    char c;
+#include<stdio.h>
+#include<string.h>
 
-    printf("\n\n");
+int main()
+{
+    int a,b,*p1,*p2,x,y,z;
 
-    for(c=65;c<=122;c++)
-    {
-        if(c>90 && c<97)
+    a=12;
+    b=4;
+    p1=&a;
+    p2=&b;
+    x=*p1**p2-6;
+    y=4*-*p2/ *p1+10;
 
-        continue;
+    printf("address of a=%u\n",p1);
+    printf("address of b=%u\n",p2);
 
-        printf("|%-40d = %c ",c , c);
-        
-         printf("|\n");
+    printf("address of a=%u\n",&p1);
+    printf("address of b=%u\n",&p2);
 
-    }
-    
+    printf("\n");
+
+    printf("a=%d,b=%d\n",a,b);
+    printf("x=%d,y=%d\n",x,y);
+
+    *p2=*p2+3;
+    *p1=*p2-5;
+
+    printf("address of a=%u\n",p1);
+    printf("address of b=%u\n",p2);
+
+    z=*p1**p2-6;
+    printf("\na=%d,b=%d,",a,b);
+    printf("z=%d\n",z);
+
+
+
 }

@@ -1,14 +1,18 @@
-#include <stdio.h>
+#include<stdio.h>
+#include<string.h>
+
 int main() {
-    int a;
-    
-    printf("enter your marks ");
-    scanf("%d",&a);
+    char *name;
+    int length;
+    name = "delhi";
+    char *cptr = name;
+    printf("%s\n",name);
+    while(*cptr !='\0')
+    {
+        printf("%c is the stored at the address %u\n",*cptr,cptr);
+        cptr++;
 
-    if(a>50)
-    printf("pass");
-
-    else
-    printf("fail");
-    return 0;
+    }
+    length=cptr-name;
+    printf("\nlength of the string = %d\n ",length);
 }

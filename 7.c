@@ -1,13 +1,33 @@
-#include <stdio.io>
-#include<string.h>
-#include<ctype.h>
+#include <stdio.h>
+#include <string.h>
 int main() {
+    char a;
+    int c;
+    float s,f;
 
-    char name[54]="sri shanmugha college of engineering and technology";
+    a='A';
+    c=215;
+    s=10.35,f=32.33;
 
-    printf("%s",name);
+    printf("%c is store addr %u.\n",a,&a);
+    printf("%d is store addr %u.\n",c,&c);
+    printf("%f is store addr %u.\n",s,&s);
+    printf("%f is store addr %u.\n",f,&f);
 
     
+    printf("%c is store addr %u.\n",a,&a);
+    printf("%d is store addr %u.\n",c,&c);
+    printf("%f is store addr %u.\n",s,&s);
+    printf("%f is store addr %u.\n",f,&f);
+
     
-    return 0;
+    printf("%c is store addr %u.\n",a,&a);
+    printf("%d is store addr %u.\n"c,&c);
+    printf("%f is store addr %u.\n",s,&s);
+    printf("%f is store addr %u.\n",f,&f);
+
+    printf("%c is store addr %u.\n",c,&c);
+    printf("%d is store addr %u.\n"c,&c);
+    printf("%f is store addr %u.\n",c,&c);
+    printf("%f is store addr %u.\n",c,&c);
 }

@@ -1,28 +1,22 @@
 #include <stdio.h>
 int main() {
-    int c,d;
+    int x,y;
 
-    char string[]="Cprograming";
+    int *ptr;
 
-    printf("\n\n");
+    x = 10;
+    ptr = &x;
+    y = *ptr;
 
-    printf("============================\n");
+    printf("value of x is %d\n ",x);
+    printf("%d is stored at addr %u\n",x,&x);
+    printf("%d is stored at addr %u\n",*&x,&x);
 
-    for(c=0;c<=9;c++)
-    {
-        d=c+1;
+    printf("%d is stored at addr %u\n",*ptr,ptr);
+    printf("%d is stored at addr %u\n",ptr,&ptr);
+    printf("%d is stored at addr %u\n",y,&y);
 
-        printf("|%12.*s|\n",d,string);
-    }
-    printf("=========================\n");
+    *ptr = 25;
+    printf("now  x = %d\n",x);
 
-    for(c=11;c>=0;c--)
-    {
-        d=c+1;
-
-        printf("|%71.*s|\n",d,string);
-
-    }
-       
-
-        }
+}

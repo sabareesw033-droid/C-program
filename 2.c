@@ -1,27 +1,19 @@
+
 #include <stdio.h>
+#include <string.h>
+
 int main() {
-
-
-    char line[81],character;
-
-    int c;
-
-    c=0;
-
-    printf("enter text. press <return> at end\n");
-
-    do{
-        character=getchar();
-
-        line[c]=character;
-        c++;
-    }
-    while(character A !='\n');
-
-    c-=1;
+    char name[] = "bharathi";
+    char degree[] = "dr"; 
     
-    line[c]='\0';
+    // Allocate enough memory to hold "bharathi" + "dr" + null terminator
+    char join[20]; 
     
-    printf("\n%s\n",line);
+    // Copy the first string into join, then concatenate the second
+    strcpy(join, name);
+    strcat(join, degree);
     
-    }
+    printf("%s\n", join);
+    
+    return 0;
+}
