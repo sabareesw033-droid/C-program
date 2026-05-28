@@ -1,14 +1,36 @@
 #include <stdio.h>
+#include<stdlib.h>
+#define NULL0
+
+
 int main() {
 
-    char line[80];
+    int*p,*table;
+    int size;
 
-    scanf("%[1234567890]",line);
+    printf("\nwhat is the size of table ?");
+    scanf("%s",&size);
 
-    printf("%s",line);
+    printf("\n");
+    /* memory allocation */
 
-    
-    scanf("%[^abcdefghijklmnopqrstuvwxyz]",line);
+    if((table=(int*) malloc(size *sizeof(int))) == NULL)
+    {
+        printf("no space available \n");
+        exit(1);
+    }
+        printf("\n Address of the first byte is %u\n",table);
+        /* reading table values */
 
-}
+        printf("\ninput table values\n");
+
+        for(p=table;p<table+size;p++){
+        scanf("%d",p);        }
+
+        /* printing table values in reverse order */
+
+        for(p=table +size-1;p>=table;p--);{
+        printf("%d is stored at address %u \n",*p,p);
+}}
+
 

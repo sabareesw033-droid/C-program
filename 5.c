@@ -1,41 +1,58 @@
 #include <stdio.h>
-#include <string.h>
-
-
 int main() {
+    FILE *f1,*f2,*f3;
+    int number,i;
 
-    char s1[],s2[],s3;
+    printf("contents of DATA file\n\n ");
+    f1 = fopen("data","w");             /* create data file */
 
-    int x,l1,l2,l3;
-
-
-    printf("\n\nenter two string constants \n");
-
-    printf("?");
-
-    scanf("%s %s ",s1,s2);
-
-    /* comparing s1,s2 */
-
-    x = strcmp(s1,s2);
-
-    if(x !=0)
+    for(i=1;i<=30;i++)
     {
-        printf("\n\nstring are not equal \n");
-        strcat(s1,s2); /*joining s1,s2 */
+        scanf("%d",&number);
+        if(number == -1)break;
+
+        putw(number,f1);
+
     }
-    else
-    printf("\n\nstirng are equal\n");
-    /* coping s1 to s3 */
-        strcpy(s3,s1);
-    /* finding length of string */
-        l1=strlen(s1);
-        l2=strlen(s2);
-        l3=strlen(s3);
+    fclose(f1);
 
-        /* output */
+    f1 = fopen("data","r");
+    f2 = fopen("odd","w");
+    f3 = fopen("even","w");
 
+    /* read from FILE data */
 
-    
-    
+    while((number=getw(f1)) !=EOF)
+    {
+        if(number %2 ==0)
+        {
+            putw(number,f3);  /* write a even FILE */
+        }
+        else
+        {
+            putw(number,f2);  /* write a odd file  */
+        }
+    }
+    fclose(f1);
+    fclose(f2);
+    fclose(f3);
+
+    f2=fopen("odd","r");
+    f2=fopen("even","r");
+
+    printf("\n\ncontents of odd file \n\n");
+
+    while((number =getw(f2)) !=EOF)
+    {
+        printf("%4d",number);
+        printf("\n\ncontents of even file \n\n");
+    }
+    while((number=getw(f3)) !=EOF)
+    {
+        printf("%d",number);
+
+    } 
+    fclose(f2);
+    fclose(f3);
+
 }

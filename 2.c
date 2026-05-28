@@ -1,19 +1,30 @@
-
 #include <stdio.h>
-#include <string.h>
-
 int main() {
-    char name[] = "bharathi";
-    char degree[] = "dr"; 
+    int *num,*freq,i,size;
+
+    printf("\nenter the size of the list :");
+    scanf("%d",&size);
+
+    num=(int*)malloc(size* sizeof(int));
+    printf("\nenter the numbers: ");
+    for(i=0;i<size;i++)
+    {
+        printf("\nenter num[%d] :",i);
+        scanf("%d",&num[i]);  
+    }
+    if(num[0]<0  || num[i]>4)
+    {
+        printf("\nnumber should be within range (0-4)");
+        i--;
+        continue;
+    }
+
+
+    freq =(int*)calloc(5,sizeof(int));
+    for(i=0;i<size;i++){
     
-    // Allocate enough memory to hold "bharathi" + "dr" + null terminator
-    char join[20]; 
-    
-    // Copy the first string into join, then concatenate the second
-    strcpy(join, name);
-    strcat(join, degree);
-    
-    printf("%s\n", join);
-    
-    return 0;
-}
+        freq[num[i]]++;
+        printf("\nthe frequencies of the number :");}
+        for(i=0;i<5;i++){
+        printf("\nfreq[%d]=%d",i,freq[i]);
+        }}

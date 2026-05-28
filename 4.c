@@ -1,23 +1,32 @@
 #include <stdio.h>
 int main() {
-    char A[] = "sscet";
-    char B[] = "SSCET";
-    char C[] = "yes";
-    char D[] = "no";
+    FILE *f1;
+    char c;
+    printf("data input\n\n");
+    /* open the file input */
+    f1==fopen("INPUT","w");
 
-    printf("\n\n");
+    /*get a character from keyboard */
 
-    printf("is A and B are Equal ?\n\n");
+    while((c=getchar()) !=EOF){
 
-    if(strcpy(A,B) == 0)
-    {
-        printf("is A and B are Equal \n\n");
+    /* write a character to INPUT */
+    putc(c,f1);
+
+    /*close the file INPUT */
+    fclose(f1);
+    printf("\ndata output\n\n");
+
+    /* reopen the file input */
+    f1=fopen("INPUT","r");
     }
-    else 
-    {
-        printf("A and B are not equal %s\n ",D);
 
-    }
-        printf("%s",strcmp(A,B)==0? C:D);
-   
-}
+    /* read a character from INPUT */
+    while((c=getc(f1)) !=EOF) {
+    
+    /* display a character screen */
+    printf("%c",c);
+
+    /* close the file INPUT */
+    fclose(f1);
+}}
