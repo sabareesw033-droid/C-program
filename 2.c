@@ -1,13 +1,27 @@
 #include <stdio.h>
-int sum(int i1,int i2,int i3)
-{
-    return(i1+i2+i3);
-}
-int main()
- {
-    printf("sum is %d\n",sum(4,6,7));
-    printf("sum is %d",sum(22,6,27));
-    
+int main() {
 
+
+    char line[81],character;
+
+    int c;
+
+    c=0;
+
+    printf("enter text. press <return> at end\n");
+
+    do{
+        character=getchar();
+
+        line[c]=character;
+        c++;
+    }
+    while(character A !='\n');
+
+    c-=1;
     
-}
+    line[c]='\0';
+    
+    printf("\n%s\n",line);
+    
+    }

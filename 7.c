@@ -1,32 +1,13 @@
-#include <stdio.h>
-#define COLMAX 12
-#define ROWMAX 12
+#include <stdio.io>
+#include<string.h>
+#include<ctype.h>
 int main() {
 
-    float row,column,y;
-    row=1;
-    printf("multiplication table \n");
-    printf("==============================\n");
+    char name[54]="sri shanmugha college of engineering and technology";
 
-    do/* outer loop starts */
-    {
-        column=1;
-
-        do/*inner loop starts*/
-        {
-            y=row*column;
-            printf("%.4f",y);
-            column=column+1;
-
-        }
-        while(column<=COLMAX);/*inner loop over */
-        printf("\n");
-        row=row+1;
-
-    }
-    while(row<=ROWMAX);
-    printf("=================");
-
+    printf("%s",name);
 
     
+    
+    return 0;
 }

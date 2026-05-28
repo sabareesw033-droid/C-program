@@ -1,32 +1,28 @@
 #include <stdio.h>
-#define COLMAX 12
-#define ROWMAX 12
+#include <ctype.h> // Required for tolower()
+
 int main() {
+    char str[30];
+    int vowel = 0, consonant = 0, i = 0;
 
-    int row,column,y;
-    row=1;
-    printf("multiplication table \n");
-    printf("==============================\n");
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin); // Safer than gets()
 
-    do/* outer loop starts */
-    {
-        column=1;
+    while (str[i] != '\0') {
+        char c = tolower(str[i]); // Convert to lowercase to check easily
 
-        do/*inner loop starts*/
-        {
-            y=row*column;
-            printf("%5d",y);
-            column=column+1;
-
+        if (c >= 'a' && c <= 'z') { // Only count actual letters
+            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+                vowel++;
+            } else {
+                consonant++;
+            }
         }
-        while(column<=COLMAX);/*inner loop over */
-        printf("\n");
-        row=row+1;
-
+        i++;
     }
-    while(row<=ROWMAX);
-    printf("=================");
 
+    printf("\nNumber of vowels = %d", vowel);
+    printf("\nNumber of consonants = %d", consonant);
 
-    
+    return 0;
 }

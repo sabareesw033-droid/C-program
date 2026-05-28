@@ -1,32 +1,36 @@
 #include <stdio.h>
-#define sabarees 3.14
-#include<math.h>
+#include<string.h>
 
 int main() {
-    /* calculatin area of a circle */
-    /* formula is pi*sqr(r) */
+    char str[30];
 
-    float volume;
+    int vowel=0,consonent=0,i=0;
 
-    int r;
+    printf("enter a string: ");
 
-    float area;
+    gets(str);
 
-    printf("what is the radius  ");
+    while(strupr[i] != '\0')
+    {
+        if( str[i]=='A' ){
 
-    scanf("%d",&r);
+        vowel++;
+        }
 
-    area=sabarees*pow(r,2);
+        if(toupper[i]='A'||)
+        {
+            vowel--;
+        }
 
-    printf("the value of the circle with radius %d is %f\n",r,area);
+        else {
+        consonent ++;
+        }
 
-    volume = (4/3)*sabarees*pow(r,3);
+        i++;
 
-    printf("the area of volume sphere for given  r = %d is =%.2f\n",r,volume);
+           }
+           printf("\nnumber of vowels = %d",vowel);
 
-    printf("the area of volume sphere for given  r = %d is =%.3f",r,volume);
-
-
-
+           printf("\nnumber of consonent = %d",consonent);
 
 }

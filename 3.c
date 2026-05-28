@@ -1,31 +1,28 @@
 #include <stdio.h>
+#include<ctype.h>
+
 int main() {
-    /* calculatin area of a circle */
-    /* formula is pi*sqr(r) */
 
-    float pi = 3.14519;
+    char string1[80],string2[80];
 
-    float volume;
+    int i;
 
-    int r;
+    printf("enter a string \n");
 
-    float area;
+    printf("?");
 
-    printf("what is the radius  ");
+    scanf("%s",string2);
 
-    scanf("%d",&r);
+    for(i=0;string2[i] !='\0';i++);
 
-    area=pi*r*r;
+    string1[i]-string2[i];
 
-    printf("the value of the circle with radius %d is %f\n",r,area);
+    string1[i]='\0';
 
-    volume = (4/3)*pi*r*r*r;
+    printf("\n");
 
-    printf("the area of volume sphere for given  r = %d is =%.2f\n",r,volume);
+    printf("%s\n",string1);
 
-    printf("the area of volume sphere for given  r = %d is =%.3f",r,volume);
-
-
-
+    printf("number of characters =%d\n",i);
 
 }

@@ -1,15 +1,33 @@
-#include<stdio.h>
-#include<float.h>
-#include<limits.h>
+#include <stdio.h>
+#include<string.h>
+
 int main() {
-    
-    printf("the minimum value of float is = %e\n\n",FLT_MIN);
+    char str[30];
 
-    printf("the maximum value of float is = %f\n\n\n",FLT_MAX);
+    int vowel=0,consonent=0,i=0;
 
-printf("the minimum value of float is = %E\n\n",FLT_MIN);
+    printf("enter a string: ");
 
-    printf("the minimum value of integer is = %i\n\n",INT_MIN);
-    
-    printf("the maximum value of integer is = %d\n\n\n",INT_MAX);
+    gets(str);
+
+    while(str[i] != '\0')
+    {
+        if(str[i]=='a' || str[i]=='A' || str[i]=='e'  || str[i]=='E'  || str[i]=='I' 
+
+        || str[i]=='i' || str[i]=='O' || str[i]=='o' || str[i]=='U' ||str[i]=='u' ){
+
+        vowel++;
+        }
+
+        else {
+        consonent ++;
+        }
+
+        i++;
+
+           }
+           printf("\nnumber of vowels = %d",vowel);
+
+           printf("\nnumber of consonent = %d",consonent);
+
 }

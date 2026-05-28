@@ -1,11 +1,28 @@
 #include <stdio.h>
-float multi(float i1,float i2,float i3)
-{
-    return(i1*i2*i3);
-}
-int main()
- {
-    printf("multiply is %.2f\n",multi(4,6,7));
-    printf("multiply is %.3f",multi(22,6,27));
-    
-}
+int main() {
+    int c,d;
+
+    char string[]="Cprograming";
+
+    printf("\n\n");
+
+    printf("============================\n");
+
+    for(c=0;c<=9;c++)
+    {
+        d=c+1;
+
+        printf("|%12.*s|\n",d,string);
+    }
+    printf("=========================\n");
+
+    for(c=11;c>=0;c--)
+    {
+        d=c+1;
+
+        printf("|%71.*s|\n",d,string);
+
+    }
+       
+
+        }
